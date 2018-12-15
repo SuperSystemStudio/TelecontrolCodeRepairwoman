@@ -2,23 +2,20 @@ import os
 import sys
 import time
 import socket
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print('Socket Created')
-platform = sys.platform
-# Connect
-def Connect():
-    print('Please enter the ip')
-    ip = input()
-    time.sleep(1)
-    print('Please enter the host')
-    host = input()
-    remote_ip = socket.gethostbyname( host )
-    s.connect((ip , host))
-    message = 'Connect.'
-    print('loading')
-    s.sendall(message)
-    print ('Message send successfully')
-    main()
+
+client = socket.socket()
+
+client.connect(("localhost",9998))
+
+while True:
+    msg = input(">> ").strip()
+    if len(msg) == 0:continue
+    client.send( msg.encode("utf-8") )
+
+    data = client.recv(1024)
+    print(data.decode()) #命令执行结果
+
+client.close()
 # main
 def main():
     mode=0
@@ -46,4 +43,3 @@ def main():
         else:
             print(command,':no find the command')
             time.sleep(1)
-Connect()
