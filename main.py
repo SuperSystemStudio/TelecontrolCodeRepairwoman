@@ -4,8 +4,12 @@ import time
 import socket
 
 client = socket.socket()
+print('please input the ip')
+ip = input()
+print('please input the path')
+path=int(input())
 
-client.connect(("localhost",9998))
+client.connect((ip,path))
 
 while True:
     msg = input(">> ").strip()
@@ -16,30 +20,3 @@ while True:
     print(data.decode()) #命令执行结果
 
 client.close()
-# main
-def main():
-    mode=0
-    true=1
-    while true == 1:
-        print('Please enter the command')
-        command = input()
-        if command == 'su':
-            if mode == 0:
-                print('Please input password')
-                password=input()
-                if password == '10000':
-                    print('welcome')
-                    mode = 1
-                    print('now,you are root')
-            elif mode == 1:
-                print('you are root')
-            else:
-                print('Password error!')
-        elif command == 'stop':
-            if mode == 0:
-                sys.exit()
-            elif mode == 1:
-                os._exit()
-        else:
-            print(command,':no find the command')
-            time.sleep(1)
