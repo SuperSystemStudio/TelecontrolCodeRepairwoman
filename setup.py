@@ -1,6 +1,6 @@
 from distutils.core import setup #如果没有需要先安装
 setup(name='Telecontrol',  #打包后的包文件名 
-      version='1.0',  #版本
+      version='2.0',  #版本
       description='a Telecontrol',   
       author=' Mr.yan',   
       license="Apache-2.0",
