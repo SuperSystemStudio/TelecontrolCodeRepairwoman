@@ -1,6 +1,3 @@
-import os
-import sys
-import time
 import socket
 
 client = socket.socket()
