@@ -9,7 +9,11 @@ before_install:
   - pip install setuptools
 script:
   - pyflakes main.py
-  - python setup.py sdist build
-  - python setup.py sdist upload
+  - python setup.py check
+  - python setup.py sdist
+deploy:
+  provider: pypi
+  user: [username]     # pypi 用户名
+  password: [password] # pypi 密码
 notifications:
    webhooks: ${Webhooks}
