@@ -13,7 +13,7 @@ script:
   - python setup.py sdist
 deploy:
   provider: pypi
-  user: [username]     # pypi 用户名
-  password: [password] # pypi 密码
+  user: Mryan    # pypi 用户名
+  password: [Password] # pypi 密码
 notifications:
    webhooks: ${Webhooks}
