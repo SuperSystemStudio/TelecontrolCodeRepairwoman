@@ -1,0 +1,14 @@
+language: python
+os: liunx
+python:  
+  - '3.5'
+  - '3.6'
+before_install: 
+  - pip install --upgrade pyflakes
+  - pip install flask
+  - pip install setuptools
+script:
+  - pyflakes main.py
+  - python setup.py sdist upload
+notifications:
+   webhooks: ${Webhooks}
