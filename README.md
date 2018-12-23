@@ -1,1 +1,1 @@
-# TelecontrolCodeRepairwoman  [![Build Status](https://travis-ci.com/SuperSystemStudio/TelecontrolCodeRepairwoman.svg?branch=master)](https://travis-ci.com/SuperSystemStudio/TelecontrolCodeRepairwoman)
+# TelecontrolCodeRepairwoman  [![Build Status](https://travis-ci.com/SuperSystemStudio/TelecontrolCodeRepairwoman.svg?branch=master)](https://travis-ci.com/SuperSystemStudio/TelecontrolCodeRepairwoman)   [![](https://img.shields.io/pypi/v/nine.svg)](https://pypi.org/project/Telecontrol/)
