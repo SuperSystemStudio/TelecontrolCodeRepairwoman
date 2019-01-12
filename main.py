@@ -9,9 +9,9 @@ client.connect((ip,path))
 mod = 0
 while True:
     if mod == 0:
-        msg = input("[user]" ).strip()
+        msg = input('[user#127.0.0.1] ').strip()
     elif mod == 1:
-        msg = input("[root]" ).strip()
+        msg = input('[root#127.0.0.1] ').strip()
     if len(msg) == 0:
         continue
     client.send(msg.encode("utf-8"))
@@ -25,4 +25,6 @@ while True:
     data = client.recv(1024)
     if data == b'now,you are root!':
         mod = 1
+print('连接已断开')
+time.sleep(3)
 client.close()
